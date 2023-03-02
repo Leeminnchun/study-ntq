@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Button, Checkbox, Form, Input } from 'antd';
 import InPutForm from '../input-form';
-
+import {Link} from 'react-router-dom'
 
 interface inputData {
     username: string
@@ -40,6 +40,7 @@ const FormValidate = () => {
     
 
     return (
+        <>
         <Form
             name="basic"
             labelCol={{ span: 8 }} // width of form
@@ -51,7 +52,7 @@ const FormValidate = () => {
             autoComplete="off"
             labelAlign='left'
         >
-
+             Form Validate
             <InPutForm
                 label='Username'
                 name='username'
@@ -138,6 +139,8 @@ const FormValidate = () => {
                 </Button>
             </Form.Item>
         </Form>
+        <Link to='/useForm'>UseForm</Link>
+        </>
     )
 }
 
